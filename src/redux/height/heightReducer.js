@@ -1,4 +1,4 @@
-import {SAVE_HEIGHT, GET_HEIGHT} from './heightActionTypes'
+import { SAVE_HEIGHT } from './heightActionTypes'
 
 const initialState = {
     height: 0
@@ -10,7 +10,6 @@ const heightReducer = (state = initialState, action) => {
             ...state,
             height: action.payload
         }
-        case GET_HEIGHT: return state
         default: return state
     }
 }
