@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import {Provider, useSelector, useDispatch} from 'react-redux'
 import './App.css';
 
+
+import InputComponent from './components/InputComponent';
+import OutputComponent from './components/OutputComponent'
+import {getWeight, getHeight} from './redux'
+
 function App() {
+
+  const showResult = useSelector(state=>state.result.showResult)
+  const dispatch = useDispatch()
+  const weight = useSelector(state=>state.weight.weight)
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <InputComponent />
+          {
+            showResult && <OutputComponent />
+          }
+      </div>
   );
 }
 

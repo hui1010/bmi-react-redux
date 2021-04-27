@@ -1,38 +1,171 @@
-.App {
+:root {
+  --block-width: 450px;
+  --input-height: 200px;
+  --output-height: 300px;
+  --bar-width: 300px;
+  --border-color: rgb(151, 240, 185);
+  --background-color: rgb(41, 211, 112);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+label {
+  display: block;
+}
+
+button {
+  outline: none;
+  border: none;
+  box-sizing: border-box;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:hover {
+  cursor: pointer;
+}
+button:focus {
+  border: none;
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(71, 70, 70, 0.555), rgba(122, 31, 31, 0.274)),
+    url("./image/training.png") 0 -170px no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*input*/
+.input,
+.output {
+  width: var(--block-width);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  border: 5px solid var(--border-color);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.input {
+  margin-top: 100px;
+  height: var(--input-height);
+}
+input:focus {
+  outline: none;
+  border: 2px solid rgb(149, 230, 149);
 }
 
-.App-link {
-  color: #61dafb;
+.input-form {
+  width: 200px;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.input-form input,
+.input-form button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-form label {
+  margin-bottom: 7px;
+}
+
+.calculate {
+  background-color: var(--background-color);
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.calculate:active {
+  transform: translateY(1px);
+}
+
+.error {
+  font-size: 7px;
+  color: red;
+}
+
+/*output*/
+.output {
+  flex-direction: column;
+  height: var(--output-height);
+  position: relative;
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+strong {
+  color: rgb(72, 211, 125);
+}
+
+.result {
+  margin: 10px auto;
+  width: var(--bar-width);
+}
+.result-bmi {
+  margin-bottom: 30px;
+}
+
+.result-bmi-bar,
+.result-weight-bar {
+  height: 20px;
+  position: relative;
+}
+.result-bmi-bar {
+  background-image: linear-gradient(
+    to right,
+    rgb(236, 74, 69),
+    rgb(129, 209, 129),
+    rgb(233, 191, 113),
+    rgb(236, 74, 69)
+  );
+}
+
+.result-weight-bar {
+  background-image: linear-gradient(
+    to right,
+    rgb(226, 243, 151),
+    rgb(185, 240, 148)
+  );
+}
+
+.result-bmi-arrow,
+.result-weight-arrow {
+  color: rgb(78, 150, 10);
+  position: relative;
+  height: 20px;
+  margin-top: 5px;
+}
+
+.result-bmi span {
+  position: absolute;
+}
+
+.axis {
+  position: relative;
+}
+.axis span {
+  position: absolute;
+  font-size: 10px;
+}
+
+.from-left {
+  animation: slide ease-in 1s;
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
   }
 }
