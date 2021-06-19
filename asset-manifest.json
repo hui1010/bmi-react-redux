@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/bmi-react-redux/static/css/main.d6c21c5a.chunk.css",
+    "main.js": "/bmi-react-redux/static/js/main.80298bbe.chunk.js",
+    "main.js.map": "/bmi-react-redux/static/js/main.80298bbe.chunk.js.map",
+    "runtime-main.js": "/bmi-react-redux/static/js/runtime-main.f6a6d183.js",
+    "runtime-main.js.map": "/bmi-react-redux/static/js/runtime-main.f6a6d183.js.map",
+    "static/js/2.42dd2d15.chunk.js": "/bmi-react-redux/static/js/2.42dd2d15.chunk.js",
+    "static/js/2.42dd2d15.chunk.js.map": "/bmi-react-redux/static/js/2.42dd2d15.chunk.js.map",
+    "index.html": "/bmi-react-redux/index.html",
+    "static/css/main.d6c21c5a.chunk.css.map": "/bmi-react-redux/static/css/main.d6c21c5a.chunk.css.map",
+    "static/js/2.42dd2d15.chunk.js.LICENSE.txt": "/bmi-react-redux/static/js/2.42dd2d15.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/bmi-react-redux/static/media/training.e4f5e2cd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f6a6d183.js",
+    "static/js/2.42dd2d15.chunk.js",
+    "static/css/main.d6c21c5a.chunk.css",
+    "static/js/main.80298bbe.chunk.js"
+  ]
+}
