@@ -11,7 +11,7 @@ function InputComponent() {
 
     const dispatch = useDispatch()
 
-    const handleClick = (e) => {
+    const handleCalculateClick = (e) => {
         e.preventDefault()
         if(!height || !weight) {
             setErr('All fields are needed.')
@@ -26,6 +26,15 @@ function InputComponent() {
         dispatch(showResult())
         setErr('')
     }
+
+    const handleClearClick = (e) => {
+        e.preventDefault()
+        setHeight('')
+        setWeight('')
+        dispatch(saveHeight(0)); 
+        dispatch(saveWeight(0));
+        setErr('')
+    }
     return (
         <div className="input">
             <form className="input-form">
@@ -34,7 +43,8 @@ function InputComponent() {
                 <label>Weight (kg)</label>
                 <input type="number" value = {weight} onChange = { e => setWeight(e.target.value)} required/>
                 <p className="error">{err}</p>
-                <button className="calculate" onClick={(e)=>handleClick(e)}>Calculate</button>
+                <button className="calculate" onClick={(e)=>handleCalculateClick(e)}>Calculate</button>
+                <button className="clear" onClick={(e)=>handleClearClick(e)}>Clear</button>
             </form>
         </div>
     )

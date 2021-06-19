@@ -74,14 +74,18 @@ input:focus {
   margin-bottom: 7px;
 }
 
-.calculate {
+.calculate,
+.clear {
   background-color: var(--background-color);
   padding: 5px 12px;
   border-radius: 5px;
   font-size: 15px;
   font-weight: bold;
+  display: inline-block !important;
+  margin-right: 15px;
 }
-.calculate:active {
+.calculate:active,
+.clear:active {
   transform: translateY(1px);
 }
 
